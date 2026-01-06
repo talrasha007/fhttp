@@ -828,10 +828,12 @@ func (t *Transport) AutoUpdate() {
 	switch t.Navigator {
 	case Firefox:
 		t.HeaderTableSize = 65536
+		t.InitialWindowSize = initialWindowSize
 
 	case Chrome:
 		t.HeaderTableSize = 65536
 		t.MaxHeaderListSize = 262144
+		t.InitialWindowSize = initialWindowSize
 
 	default:
 		t.HeaderTableSize = initialHeaderTableSize
